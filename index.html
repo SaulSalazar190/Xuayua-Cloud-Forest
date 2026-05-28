@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta
+    name="description"
+    content="Hospedaje premium en Juayúa, Ruta de las Flores, El Salvador.">
+    <meta
+    name="keywords"
+    content="Juayúa, Airbnb, Ruta de las Flores, hospedaje">
+    <meta property="og:title"
+    content="Xuayua Cloud Forest">
+    <meta property="og:description"
+    content="Hospedaje premium en Juayúa">
+    <meta property="og:image"
+    content="https://TUWEB.com/static/images/preview.webp">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Xuayua Cloud Forest</title>
+    <meta name="description" content="Descubre la experiencia de hospedarte en una Casa exclusiva de alta montaña en Juayúa. Explora la Ruta de las Flores, su gastronomía y cultura local.">
+    <meta name="keywords" content="Airbnb Juayúa, Ruta de las Flores, Cabaña El Salvador, Turismo Juayúa, Alquiler vacacional Juayúa, Hotel Juayúa">
+    
+    <link rel="icon" type="image/png" href="./static/images/logo_pestana.png">
+
+    <!-- Icon Font CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Modularized CSS Sheets -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <link rel="stylesheet" href="../static/css/hero.css">
+    <link rel="stylesheet" href="../static/css/gallery.css">
+    <link rel="stylesheet" href="../static/css/rules.css">
+    <link rel="stylesheet" href="../static/css/events.css">
+    <link rel="stylesheet" href="../static/css/responsive.css">
+</head>
+<body>
+
+    <!-- Ambient Orbital Glowing Spheres -->
+    <div class="ambient-glow glow-blue"></div>
+    <div class="ambient-glow glow-red"></div>
+
+    <!-- ==========================================
+         NAVIGATION BAR
+         ========================================== -->
+    <nav class="navbar glass-panel" id="main-nav">
+        <a href="#hero" class="nav-logo">
+            <i class="fa-solid fa-house-chimney-window"></i>
+            <span class="logo-desktop">Xuayua Cloud Forest</span>
+            <span class="logo-mobile">XCF</span>
+        </a>
+        
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="#hero" class="active" data-section="hero" id="nav-link-hero">Inicio</a></li>
+            <li><a href="#juayua" data-section="juayua" id="nav-link-juayua">Juayúa</a></li>
+            <li><a href="#ruta" data-section="ruta" id="nav-link-ruta">Ruta de las Flores</a></li>
+            <li><a href="#casa" data-section="casa" id="nav-link-casa">Nuestra Casa</a></li>
+            <li><a href="#galeria" data-section="galeria" id="nav-link-galeria">Galería</a></li>
+            <li><a href="#reglas" data-section="reglas" id="nav-link-reglas">Reglas</a></li>
+            <li><a href="#eventos" data-section="eventos" id="nav-link-eventos">Eventos</a></li>
+            <li><a href="#contacto" data-section="contacto" id="nav-link-contacto">Contacto</a></li>
+        </ul>
+
+        <div class="nav-controls">
+            <button class="lang-switch" id="lang-toggle-btn" aria-label="Cambiar Idioma">
+                <i class="fa-solid fa-globe"></i>
+                <span id="lang-label">EN</span>
+            </button>
+            <a href="https://www.airbnb.com" target="_blank" class="btn-book" id="nav-book-btn">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Reservar</span>
+            </a>
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir Menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <header class="hero" id="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-container">
+            
+            <div class="hero-content">
+                <div class="hero-badge" id="hero-badge">
+                    <i class="fa-solid fa-sparkles"></i>
+                    <span>Escape Premium en el pueblo</span>
+                </div>
+                <h1 class="hero-title" id="hero-title">
+                    Un Refugio Entre <br><span>Nubes y Tradición</span>
+                </h1>
+                <p class="hero-desc" id="hero-desc">
+                    Descubre la experiencia de hospedarte en Xuayua Cloud Forest, una casa exclusiva ubicada en el corazón de Juayúa.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://www.airbnb.com" target="_blank" class="btn-primary" id="hero-action-book">
+                        <i class="fa-brands fa-airbnb"></i> Reservar en Airbnb
+                    </a>
+                    <a href="#juayua" class="btn-secondary" id="hero-action-explore">
+                        Explorar Destino <i class="fa-solid fa-arrow-down-long"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual glass-panel">
+                <img src="https://images.unsplash.com/photo-1549693578-d683be217e58?q=80&w=1200&auto=format&fit=crop" 
+                     alt="Premium Mountain Cabin Exterior" class="hero-image" id="hero-img-main">
+                <div class="hero-visual-overlay">
+                    <div class="hero-cabin-info">
+                        <div class="info-stat">
+                            <div class="info-stat-val">5</div>
+                            <div class="info-stat-lbl" id="stat-guests">Huéspedes</div>
+                        </div>
+                        <div class="info-stat">
+                            <div class="info-stat-val">3</div>
+                            <div class="info-stat-lbl" id="stat-beds">Dormitorios</div>
+                        </div>
+                        <div class="info-stat">
+                            <div class="info-stat-val">4</div>
+                            <div class="info-stat-lbl" id="stat-baths">Camas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ==========================================
+         JUAYÚA EXPLORER SECTION
+         ========================================== -->
+    <section id="juayua">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle" id="jua-sub">Cultura & Tradición</span>
+                <h2 class="section-title" id="jua-title">Descubre Juayúa</h2>
+                <p class="section-desc" id="jua-desc">
+                    Descubre Juayúa desde Xuayua Cloud Forest. Ubicada en el corazón de Sonsonate, nuestra casa te abre las puertas a un destino sinónimo de aventura, clima templado, arte y cafetales históricos. Quédate en el centro de todo.
+                </p>
+            </div>
+
+            <div class="juayua-grid">
+                
+                <div class="explorer-card glass-panel">
+                    <img src="./static/images/gastronomica.jpg" alt="Gastronomía de Juayúa" class="explorer-img">
+                    <div class="explorer-overlay">
+                        <div class="explorer-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <h3 id="card-jua-gast-title">Festival Gastronómico</h3>
+                        <p id="card-jua-gast-desc">Cada fin de semana, el parque central se llena de aromas locales con una gran variedad de platillos típicos y exóticos.</p>
+                    </div>
+                </div>
+
+                <div class="explorer-card glass-panel">
+                    <img src="./static/images/iglesia.jpg" alt="Iglesia Santa Lucía Juayúa" class="explorer-img">
+                    <div class="explorer-overlay">
+                        <div class="explorer-icon"><i class="fa-solid fa-place-of-worship"></i></div>
+                        <h3 id="card-jua-hist-title">Historia y Fe</h3>
+                        <p id="card-jua-hist-desc">La hermosa e icónica Iglesia de Santa Lucía, de estilo neogótico y blanca fachada, es el corazón cultural del pueblo.</p>
+                    </div>
+                </div>
+
+                <div class="explorer-card glass-panel">
+                    <img src="./static/images/chorros.jpg" alt="Chorros de la Calera Juayúa" class="explorer-img">
+                    <div class="explorer-overlay">
+                        <div class="explorer-icon"><i class="fa-solid fa-water"></i></div>
+                        <h3 id="card-jua-nat-title">Aventura Natural</h3>
+                        <p id="card-jua-nat-desc">Los Chorros de la Calera ofrecen cascadas de aguas cristalinas ideales para los amantes del senderismo y el ecoturismo.</p>
+                    </div>
+                </div>
+
+                <div class="explorer-card glass-panel">
+                    <img src="./static/images/cafe.avif" alt="Coffee Cultivation El Salvador" class="explorer-img">
+                    <div class="explorer-overlay">
+                        <div class="explorer-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                        <h3 id="card-jua-cafe-title">Cuna del Café</h3>
+                        <p id="card-jua-cafe-desc">Explora los cafés locales del pueblo, el escenario perfecto para relajarte con el clima fresco y degustar el auténtico café de altura más fino de la región.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         RUTA DE LAS FLORES (INTERACTIVE MAP)
+         ========================================== -->
+    <section id="ruta">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle" id="ruta-sub">Circuito de Ensueño</span>
+                <h2 class="section-title" id="ruta-title">La Ruta de las Flores</h2>
+                <p class="section-desc" id="ruta-desc">
+                    Un viaje cautivador por pueblos pintorescos de montaña llenos de vegetación, arte urbano, miradores excepcionales y un ambiente primaveral continuo. <b>Xuayua Cloud Forest</b> es tu punto de partida ideal para vivir esta experiencia.
+                </p>
+            </div>
+
+            <div class="ruta-panel">
+                
+                <!-- Interactive SVG Map -->
+                <div class="map-container glass-panel">
+                    <svg class="map-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                        
+                        <!-- Route Connection dashpath -->
+                        <path class="map-path" d="M 60 300 Q 140 310 180 230 T 260 140 T 360 110 T 440 90" />
+                        
+                        <!-- Town 1: Nahuizalco -->
+                        <g class="map-town" id="town-nahuizalco" data-town="nahuizalco">
+                            <circle cx="60" cy="300" r="10" />
+                            <text x="35" y="325">Nahuizalco</text>
+                        </g>
+
+                        <!-- Town 2: Salcoatitán -->
+                        <g class="map-town" id="town-salcoatitan" data-town="salcoatitan">
+                            <circle cx="180" cy="230" r="10" />
+                            <text x="135" y="210">Salcoatitán</text>
+                        </g>
+
+                        <!-- Town 3: Juayúa (Airbnb Cabin Location) -->
+                        <g class="map-town map-town-center active" id="town-juayua" data-town="juayua">
+                            <circle cx="260" cy="140" r="14" />
+                            <text x="240" y="115">Juayúa (Casa)</text>
+                        </g>
+
+                        <!-- Town 4: Apaneca -->
+                        <g class="map-town" id="town-apaneca" data-town="apaneca">
+                            <circle cx="360" cy="110" r="10" />
+                            <text x="335" y="90">Apaneca</text>
+                        </g>
+
+                        <!-- Town 5: Ataco -->
+                        <g class="map-town" id="town-ataco" data-town="ataco">
+                            <circle cx="440" cy="90" r="10" />
+                            <text x="415" y="65">Ataco</text>
+                        </g>
+                        
+                    </svg>
+                </div>
+
+                <!-- Selected Town Info Card -->
+                <div class="town-info-card glass-panel" id="town-info-box">
+                    <div class="town-info-header">
+                        <span class="town-tag" id="town-info-tag">UBICACIÓN PRINCIPAL</span>
+                        <div style="color: #64748b; font-size: 0.85rem;"><i class="fa-solid fa-cloud-sun"></i> 18°C - 23°C</div>
+                    </div>
+                    <h3 id="town-info-title">Juayúa</h3>
+                    <p id="town-info-desc">El centro vital del circuito turístico. Es famoso por sus increíbles atractivos de aventura natural como Los Chorros de la Calera, los recorridos de buggies y el renombrado Festival Gastronómico de fin de semana.</p>
+                    <hr style="border: 0; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="town-features">
+                        <div class="town-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span id="town-feat-1">Festival gastronómico semanal</span>
+                        </div>
+                        <div class="town-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span id="town-feat-2">Cascadas de agua pura natural</span>
+                        </div>
+                        <div class="town-feature">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span id="town-feat-3">Tours en buggies y cafetales</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         NUESTRA CASA SECTION
+         ========================================== -->
+    <section id="casa">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle" id="casa-sub">Detrás Del Hospedaje</span>
+                <h2 class="section-title" id="casa-title">Nuestra Casa</h2>
+                <p class="section-desc" id="casa-desc">
+                    Un espacio diseñado con esmero en el corazón de Juayúa para desconectar de la rutina diaria y abrazar la paz de Xuayua Cloud Forest.
+                </p>
+            </div>
+
+            <div class="casa-panel">
+                
+                <!-- Mosaic Gallery -->
+                <div class="casa-visual">
+                    <div class="casa-grid">
+                        <div class="casa-img-container casa-img-tall">
+                            <img src="https://images.unsplash.com/photo-1542718610-a1d656d1884c?q=80&w=600&auto=format&fit=crop" alt="Cozy Fireplace inside Airbnb">
+                        </div>
+                        <div class="casa-img-container casa-img-offset">
+                            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600&auto=format&fit=crop" alt="Beautiful Forest View">
+                        </div>
+                        <div class="casa-img-container">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop" alt="Luxury Master Bedroom decoration">
+                        </div>
+                        <div class="casa-img-container casa-img-tall" style="margin-top: -50px;">
+                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600&auto=format&fit=crop" alt="Stunning outdoor mountain patio">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story Text & Amenities Grid -->
+                <div class="casa-content">
+                    <p class="casa-story" id="casa-story-1">
+                        <b>Xuayua Cloud Forest nació del sueño de compartir un espacio de paz y serenidad en el corazón del pueblo.</b>
+                    </p>
+                    <p class="casa-story" id="casa-story-2">
+                        Ubicada en una propiedad privada dentro de la zona urbana, nuestra casa ha sido edificada combinando elementos de madera local con acabados modernos. Aquí disfrutarás de un oasis de tranquilidad con la ventaja de tener todo cerca.
+                    </p>
+                    <p class="casa-story" id="casa-story-3">
+                        Para nosotros, cada huésped representa a un amigo explorando estas mágicas tierras de café. Por ello, proveemos amenidades exclusivas
+                    </p>
+                    
+                    <h3 style="margin-top: 10px; color: white;" id="casa-amenities-title">Comodidades Destacadas</h3>
+                    
+                    <div class="amenities-grid">
+                        <div class="amenity-card">
+                            <i class="fa-solid fa-wifi"></i>
+                            <span id="amenity-wifi">WiFi de Alta Velocidad</span>
+                        </div>
+                        <div class="amenity-card">
+                            <i class="fa-solid fa-fire"></i>
+                            <span id="amenity-fire">Cocina Premium</span>
+                        </div>
+                        <div class="amenity-card">
+                            <i class="fa-solid fa-square-parking"></i>
+                            <span id="amenity-park">Estacionamiento Exterior</span>
+                        </div>
+                        <div class="amenity-card">
+                            <i class="fa-solid fa-house"></i>
+                            <span id="amenity-coffee">Estilo colonial</span>
+                        </div>
+                        <div class="amenity-card">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                            <span id="amenity-view">Área verde</span>
+                        </div>
+                        <div class="amenity-card">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span id="amenity-security">Cámaras exteriores</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO GALLERY & LIGHTBOX
+         ========================================== -->
+    <section id="galeria">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle" id="gal-sub">Inspiración Visual</span>
+                <h2 class="section-title" id="gal-title">Galería Fotográfica</h2>
+                <p class="section-desc" id="gal-desc">
+                    Recorre visualmente cada rincón de nuestra acogedora casa, desde las habitaciones hasta los detalles modernos y el hermoso jardín privado.
+                </p>
+            </div>
+
+            <!-- Filter list buttons -->
+            <ul class="gallery-filters">
+                <li><button class="filter-btn active" data-filter="all" id="btn-filter-all">Todos</button></li>
+                <li><button class="filter-btn" data-filter="habitaciones" id="btn-filter-rooms">Habitaciones</button></li>
+                <li><button class="filter-btn" data-filter="comunes" id="btn-filter-common">Áreas Comunes</button></li>
+                <li><button class="filter-btn" data-filter="exteriores" id="btn-filter-exterior">Jardín y Vistas</button></li>
+            </ul>
+
+            <!-- Thumbnails grid -->
+            <div class="gallery-grid" id="gallery-wrapper">
+                
+                <div class="gallery-item glass-panel" data-category="habitaciones">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=600&auto=format&fit=crop" 
+                         alt="Dormitorio Principal" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title" id="gal-lbl-1">Dormitorio Principal Suite</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-panel" data-category="comunes">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=600&auto=format&fit=crop" 
+                         alt="Sala con Chimenea" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title" id="gal-lbl-2">Sala de Estar Moderna</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-panel" data-category="comunes">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600&auto=format&fit=crop" 
+                         alt="Cocina Completa" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title" id="gal-lbl-3">Cocina Totalmente Equipada</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-panel" data-category="exteriores">
+                    <img src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?q=80&w=600&auto=format&fit=crop" 
+                         alt="Jardín y Zona de Fogata" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title" id="gal-lbl-4">Fogata al Aire Libre</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-panel" data-category="habitaciones">
+                    <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=600&auto=format&fit=crop" 
+                         alt="Segundo Dormitorio" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title" id="gal-lbl-5">Dormitorio Secundario Confortable</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item glass-panel" data-category="exteriores">
+                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=600&auto=format&fit=crop" 
+                         alt="Vista Panorámica Volcanes" class="gallery-img">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-title" id="gal-lbl-6">Espectacular Vista de Montaña</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Lightbox Modal -->
+    <div class="lightbox" id="lightbox-modal">
+        <button class="lightbox-close" id="lightbox-close-btn" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" id="lightbox-prev-btn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Zoom Photo" class="lightbox-img" id="lightbox-img-focus">
+        </div>
+        <button class="lightbox-next" id="lightbox-next-btn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- ==========================================
+         HOUSE RULES (ACCORDIONS)
+         ========================================== -->
+    <section id="reglas">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle" id="reg-sub">Normas del Hogar</span>
+                <h2 class="section-title" id="reg-title">Reglas de Convivencia</h2>
+                <p class="section-desc" id="gal-desc-rules">
+                    Para asegurar una estancia placentera y armoniosa, te solicitamos amablemente seguir estas pautas generales.
+                </p>
+            </div>
+
+            <div class="rules-panel">
+                
+                <!-- Intro Warning Details Card -->
+                <div class="rules-intro glass-panel">
+                    <div class="rules-intro-icon">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3 id="rules-box-title">Convivencia en Armonía</h3>
+                    <p id="rules-box-desc">
+                        Buscamos preservar el ambiente natural y pacífico de Juayúa. Cuidar de la Casa como si fuera tu propio hogar garantiza una experiencia inigualable para ti y futuros visitantes.
+                    </p>
+                    <div style="font-size: 0.85rem; color: #ef4444; font-weight: 600;">
+                        <i class="fa-solid fa-triangle-exclamation"></i> <span id="rules-box-note">Por favor lee todas las reglas antes de llegar.</span>
+                    </div>
+                </div>
+
+                <!-- Collapsible Rules list -->
+                <div class="accordion-container">
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header active">
+                            <div class="accordion-title-box">
+                                <i class="fa-solid fa-clock"></i>
+                                <span id="rule-title-1">Horarios de Entrada y Salida</span>
+                            </div>
+                            <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content" style="max-height: 200px;">
+                            <div class="accordion-content-inner" id="rule-desc-1">
+                                El Check-in es a partir de las 3:00 PM y el Check-out se realiza a las 11:00 AM para dar suficiente tiempo de limpiar y sanitizar la propiedad con estándares premium.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <div class="accordion-title-box">
+                                <i class="fa-solid fa-volume-low"></i>
+                                <span id="rule-title-2">Ruido y Fiestas</span>
+                            </div>
+                            <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner" id="rule-desc-2">
+                                No se permiten eventos ni fiestas con música alta en la propiedad. Respetamos las horas de silencio entre las 10:00 PM y las 7:00 AM para asegurar el descanso de los vecinos.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <div class="accordion-title-box">
+                                <i class="fa-solid fa-paw"></i>
+                                <span id="rule-title-3">Mascotas</span>
+                            </div>
+                            <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner" id="rule-desc-3">
+                                ¡Las mascotas son bienvenidas bajo previa solicitud! Solicitamos a los dueños encargarse de cualquier desecho y evitar que suban a las camas y sofás.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <div class="accordion-title-box">
+                                <i class="fa-solid fa-ban-smoking"></i>
+                                <span id="rule-title-4">Fumar</span>
+                            </div>
+                            <span class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="accordion-content-inner" id="rule-desc-4">
+                                Está terminantemente prohibido fumar dentro de las instalaciones. Se permite fumar cigarrillo únicamente en las áreas exteriores asignadas, desechando las colillas con seguridad.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         DYNAMIC EVENTS SECTION (GOOGLE SHEETS)
+         ========================================== -->
+    <section id="eventos">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle" id="evt-sub">Actividades Locales</span>
+                <h2 class="section-title" id="evt-title">Eventos en Juayúa</h2>
+                <p class="section-desc" id="evt-desc">
+                    Mantente al tanto de las ferias, festivales culinarios y eventos culturales en Juayúa a través de nuestra guía, una sección que se actualiza automáticamente para tu viaje.
+                </p>
+            </div>
+
+            <!-- Pre-loader spinner -->
+            <div class="event-loading" id="events-loader">
+                <div class="spinner"></div>
+                <p id="events-loading-text">Cargando eventos de la comunidad...</p>
+            </div>
+
+            <!-- Dynamic grid container -->
+            <div class="events-grid" id="events-wrapper" style="display: none;">
+                <!-- Filled dynamically via events.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT & GEOGRAPHIC MAPS
+         ========================================== -->
+    <section id="contacto">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-subtitle" id="cnt-sub">¡Hablemos!</span>
+                <h2 class="section-title" id="cnt-title">Contacto y Ubicación</h2>
+                <p class="section-desc" id="cnt-desc">
+                    Si tienes preguntas sobre tu reserva, cómo llegar o necesitas asistencia personalizada, estamos listos para atenderte.
+                </p>
+            </div>
+
+            <div class="contact-panel">
+                
+                <!-- Left Details cards -->
+                <div class="contact-info">
+                    
+                    <div class="contact-card-box">
+                        <div class="contact-card-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-card-text">
+                            <h4 id="cnt-lbl-email">Correo Electrónico</h4>
+                            <p>xuayuacloudforest@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-box">
+                        <div class="contact-card-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-card-text">
+                            <h4 id="cnt-lbl-phone">Teléfono / WhatsApp</h4>
+                            <p>+503 1111-1111</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-box">
+                        <div class="contact-card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <div class="contact-card-text">
+                            <h4 id="cnt-lbl-dir">Dirección</h4>
+                            <p>Juayúa, Sonsonate, El Salvador</p>
+                        </div>
+                    </div>
+
+                    <h3 class="socials-title" id="cnt-lbl-soc">Nuestras Redes</h3>
+                    <div class="socials-grid">
+                        <a href="https://wa.me/50372345678" target="_blank" class="social-circle ws" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.airbnb.com" target="_blank" class="social-circle ab" aria-label="Airbnb"><i class="fa-brands fa-airbnb"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-circle ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-circle fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+
+                </div>
+
+                <!-- Right Form card -->
+                <div class="contact-form-panel glass-panel">
+                    <form id="airbnb-contact-form">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="form-name" id="form-lbl-name">Nombre Completo</label>
+                                <input type="text" id="form-name" name="name" placeholder="Juan Pérez" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email" id="form-lbl-email">Correo</label>
+                                <input type="email" id="form-email" name="email" placeholder="juan@correo.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="form-subject" id="form-lbl-subject">Asunto</label>
+                            <input type="text" id="form-subject" name="subject" placeholder="Consulta sobre disponibilidad..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message" id="form-lbl-msg">Mensaje</label>
+                            <textarea id="form-message" name="message" rows="4" placeholder="Hola, me gustaría saber si..." required></textarea>
+                        </div>
+
+                        <div class="g-recaptcha" data-theme="dark" data-sitekey="6LdZcgEtAAAAAHl-MSx_o1gJ5LPIRGOnmiOH_gNZ"></div>
+
+                        <button type="submit" class="btn-submit" id="form-btn-send">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Inverted Dark Maps Frame -->
+            <div class="map-iframe-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4995.845088605828!2d-89.74490610033067!3d13.842590520612456!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2ssv!4v1779919324754!5m2!1ses-419!2ssv"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="nav-logo" style="margin: 0;">
+                <i class="fa-solid fa-house-chimney-window"></i>
+                <span>Xuayua Cloud Forest</span>
+            </div>
+            <div class="footer-text" id="footer-copy">
+                &copy; 2026 Xuayua Cloud Forest - Juayúa. Reservados todos los derechos.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp quick dial -->
+    <a href="https://wa.me/50372345678" target="_blank" class="whatsapp-float" aria-label="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Modular Script Engines loaded sequentially -->
+    <script src="../static/js/translations.js"></script>
+    <script src="../static/js/maps.js"></script>
+    <script src="../static/js/gallery.js"></script>
+    <script src="../static/js/events.js"></script>
+    <script src="../static/js/animations.js"></script>
+    <script src="../static/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    emailjs.init("Si_jK92jcRSW7dbe4");
+    </script>
+    <script src="./static/js/contact.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>

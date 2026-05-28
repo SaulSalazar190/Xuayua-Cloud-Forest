@@ -1,0 +1,724 @@
+/* ==========================================================================
+    ESTILOS PRINCIPALES DEL SISTEMA - Xuayua Cloud Forest
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+    /* Color Palette */
+    --color-bg-base: #050816;
+    --color-bg-card: rgba(15, 23, 42, 0.55);
+    --color-bg-card-opaque: #0f172a;
+    --color-bg-section: #1e293b;
+    --color-primary: #3b82f6;
+    --color-primary-glow: rgba(96, 165, 250, 0.45);
+    --color-accent-red: #ef4444;
+    --color-accent-red-glow: rgba(239, 68, 68, 0.4);
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
+    --border-glass: rgba(255, 255, 255, 0.08);
+    --border-glass-hover: rgba(96, 165, 250, 0.3);
+
+    /* Shadows & Glows */
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --shadow-glow-blue: 0 0 25px var(--color-primary-glow);
+    --shadow-glow-red: 0 0 25px var(--color-accent-red-glow);
+
+    /* Fonts */
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-fast: all 0.2s ease-out;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-bg-base);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 2px solid var(--color-bg-base);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+button {
+    font-family: var(--font-body);
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: var(--transition-fast);
+}
+
+/* Glassmorphism Panel Utilities */
+.glass-panel {
+    background: var(--color-bg-card);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    box-shadow: var(--shadow-glass);
+    transition: var(--transition-smooth);
+}
+.glass-panel:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* Floating Ambient Glow Backgrounds */
+.ambient-glow {
+    position: fixed;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    filter: blur(140px);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.18;
+    mix-blend-mode: plus-lighter;
+    transition: var(--transition-smooth);
+}
+.glow-blue {
+    background: radial-gradient(circle, var(--color-primary) 0%, rgba(59, 130, 246, 0) 70%);
+    top: -10%;
+    left: -10%;
+    animation: floatGlow 20s infinite alternate;
+}
+.glow-red {
+    background: radial-gradient(circle, var(--color-accent-red) 0%, rgba(239, 68, 68, 0) 70%);
+    bottom: -10%;
+    right: -10%;
+    animation: floatGlowReverse 25s infinite alternate;
+}
+
+@keyframes floatGlow {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(10%, 15%) scale(1.1); }
+}
+@keyframes floatGlowReverse {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-12%, -8%) scale(1.15); }
+}
+
+/* General Sections Layout */
+section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+.section-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+.section-header {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+}
+.section-subtitle {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary-glow);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.section-title {
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, #ffffff 60%, var(--color-text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section-desc {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+    margin-top: 8px;
+}
+
+/* Floating WhatsApp Quick link button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 58px;
+    height: 58px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+    z-index: 999;
+    transition: var(--transition-smooth);
+}
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* ==========================================================================
+   JUAYÚA EXPLORER SECTION STYLES
+   ========================================================================== */
+
+.juayua-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.explorer-card {
+    position: relative;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.explorer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.explorer-card:hover .explorer-img {
+    transform: scale(1.08);
+}
+
+.explorer-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5, 8, 22, 0.9) 0%, rgba(5, 8, 22, 0.4) 50%, rgba(5, 8, 22, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    transition: var(--transition-smooth);
+}
+
+.explorer-card:hover .explorer-overlay {
+    background: linear-gradient(to top, rgba(5, 8, 22, 0.95) 0%, rgba(5, 8, 22, 0.6) 60%, rgba(5, 8, 22, 0.1) 100%);
+}
+
+.explorer-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-glow);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
+}
+
+.explorer-card:hover .explorer-icon {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: var(--shadow-glow-blue);
+    transform: translateY(-4px);
+}
+
+.explorer-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.explorer-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    opacity: 0.8;
+    transform: translateY(10px);
+    transition: var(--transition-smooth);
+}
+
+.explorer-card:hover p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ==========================================================================
+   RUTA DE LAS FLORES - INTERACTIVE SVG MAP STYLES
+   ========================================================================== */
+
+.ruta-panel {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.map-container {
+    background: var(--color-bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 32px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: var(--shadow-glass);
+}
+
+.map-svg {
+    width: 100%;
+    height: 100%;
+    max-height: 380px;
+}
+
+.map-town {
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.map-town circle {
+    fill: #1e293b;
+    stroke: var(--color-primary);
+    stroke-width: 3;
+    transition: var(--transition-smooth);
+}
+
+.map-town text {
+    fill: var(--color-text-secondary);
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.map-path {
+    fill: none;
+    stroke: rgba(59, 130, 246, 0.25);
+    stroke-width: 4;
+    stroke-dasharray: 8 6;
+    animation: dashRoute 30s linear infinite;
+}
+
+@keyframes dashRoute {
+    to {
+        stroke-dashoffset: -1000;
+    }
+}
+
+/* Map Hover & Active Interactions */
+.map-town:hover circle,
+.map-town.active circle {
+    fill: var(--color-primary);
+    stroke: white;
+    filter: drop-shadow(0 0 8px var(--color-primary));
+}
+
+.map-town:hover text,
+.map-town.active text {
+    fill: white;
+    font-weight: 700;
+}
+
+.map-town-center circle {
+    stroke: var(--color-accent-red) !important;
+}
+
+.map-town-center:hover circle,
+.map-town-center.active circle {
+    fill: var(--color-accent-red) !important;
+    filter: drop-shadow(0 0 8px var(--color-accent-red)) !important;
+}
+
+/* Town Info Display Panel */
+.town-info-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 32px;
+}
+
+.town-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.town-tag {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: var(--color-accent-red);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.town-info-card h3 {
+    font-size: 2rem;
+    color: white;
+}
+
+.town-info-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.town-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.town-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+}
+
+.town-feature i {
+    color: var(--color-primary);
+}
+
+/* ==========================================================================
+   NUESTRA CASA SECTION STYLES
+   ========================================================================== */
+
+.casa-panel {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.casa-visual {
+    position: relative;
+}
+
+.casa-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.casa-img-container {
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-glass);
+}
+
+.casa-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.casa-img-container:hover img {
+    transform: scale(1.05);
+}
+
+.casa-img-tall {
+    height: 320px;
+    margin-top: -50px;
+}
+
+.casa-img-offset {
+    margin-top: 50px;
+}
+
+.casa-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.casa-story {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.amenity-card {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    transition: var(--transition-smooth);
+}
+
+.amenity-card:hover {
+    border-color: rgba(59, 130, 246, 0.2);
+    background: rgba(59, 130, 246, 0.02);
+    transform: translateY(-2px);
+}
+
+.amenity-card i {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+}
+
+.amenity-card span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   CONTACT & SOCIAL PANEL STYLES
+   ========================================================================== */
+
+.contact-panel {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 48px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-card-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.contact-card-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    transition: var(--transition-smooth);
+}
+
+.contact-card-box:hover .contact-card-icon {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: var(--shadow-glow-blue);
+    transform: scale(1.05);
+}
+
+.contact-card-text h4 {
+    font-size: 1rem;
+    color: white;
+}
+
+.contact-card-text p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+/* Social Grid Links */
+.socials-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.socials-grid {
+    display: flex;
+    gap: 12px;
+}
+
+.social-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    transition: var(--transition-fast);
+}
+
+.social-circle:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+.social-circle.ws:hover { background: #25d366; border-color: #25d366; }
+.social-circle.ab:hover { background: #ff5a5f; border-color: #ff5a5f; }
+.social-circle.ig:hover { background: #e1306c; border-color: #e1306c; }
+.social-circle.fb:hover { background: #1877f2; border-color: #1877f2; }
+
+/* Dynamic Contact Form */
+.contact-form-panel {
+    padding: 40px;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-glass);
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: white;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.15);
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1d4ed8 100%);
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: var(--transition-fast);
+}
+
+.btn-submit:hover {
+    box-shadow: var(--shadow-glow-blue);
+    transform: translateY(-1px);
+}
+
+/* Dark Map Embed Frame container */
+.map-iframe-container {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-glass);
+    box-shadow: var(--shadow-glass);
+    margin-top: 48px;
+}
+
+.map-iframe-container iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+/* Footer layout */
+.footer {
+    border-top: 1px solid var(--border-glass);
+    padding: 48px 0;
+    text-align: center;
+    background: rgba(5, 8, 22, 0.8);
+    position: relative;
+    z-index: 2;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.footer-text {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}

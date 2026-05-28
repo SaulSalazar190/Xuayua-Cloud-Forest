@@ -1,0 +1,114 @@
+/* ==========================================================================
+   HOUSE RULES ACCORDION STYLES - Xuayua Cloud Forest
+   ========================================================================== */
+
+.rules-panel {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.rules-intro {
+    background: var(--color-bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: var(--shadow-glass);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rules-intro-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-accent-red);
+    box-shadow: var(--shadow-glow-red);
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordion-item {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    text-align: left;
+    color: white;
+    transition: var(--transition-fast);
+}
+
+.accordion-header:hover {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.accordion-header.active {
+    background: rgba(59, 130, 246, 0.05);
+    border-color: rgba(59, 130, 246, 0.25);
+    border-radius: 16px 16px 0 0;
+}
+
+.accordion-title-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.accordion-title-box i {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    transition: var(--transition-fast);
+}
+
+.accordion-header.active .accordion-title-box i {
+    color: var(--color-accent-red);
+}
+
+.accordion-icon {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px solid var(--border-glass);
+    border-top: none;
+    border-radius: 0 0 16px 16px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-content-inner {
+    padding: 24px;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

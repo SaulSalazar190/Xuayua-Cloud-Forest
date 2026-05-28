@@ -1,0 +1,135 @@
+/* ==========================================================================
+   NAVIGATION BAR STYLES - Xuayua Cloud Forest
+   ========================================================================== */
+
+.navbar {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1600px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.navbar.scrolled {
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background: rgba(5, 8, 22, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fff 40%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-logo i {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--color-text-primary);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent-red));
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--color-text-primary);
+    transition: var(--transition-fast);
+}
+
+.lang-switch:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-book {
+    background: linear-gradient(135deg, var(--color-accent-red) 0%, #dc2626 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.35);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5), var(--shadow-glow-red);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+}

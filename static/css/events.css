@@ -1,0 +1,91 @@
+/* ==========================================================================
+   ESTILOS DE CRONOGRAMA DE EVENTOS DINÁMICOS - Xuayua Cloud Forest
+   ========================================================================== */
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.event-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 16px;
+}
+
+.spinner {
+    width: 44px;
+    height: 44px;
+    border: 3px solid rgba(59, 130, 246, 0.15);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.event-card {
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-details {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.event-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.event-date {
+    color: var(--color-accent-red);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.event-place {
+    color: var(--color-primary-glow);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.event-card h3 {
+    font-size: 1.3rem;
+    color: white;
+}
+
+.event-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}

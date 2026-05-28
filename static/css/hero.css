@@ -1,0 +1,186 @@
+/* ==========================================================================
+   HERO / INICIO SECTION STYLES - Xuayua Cloud Forest
+   ========================================================================== */
+
+.hero {
+    min-height: 100vh;
+    padding-top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 40% 30%, rgba(59, 130, 246, 0.15) 0%, rgba(5, 8, 22, 0) 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(239, 68, 68, 0.1) 0%, rgba(5, 8, 22, 0) 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hero-badge {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--color-primary-glow);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+}
+
+.hero-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #ffffff 40%, var(--color-text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-title span {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-red) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-desc {
+    font-size: 1.15rem;
+    color: var(--color-text-secondary);
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1d4ed8 100%);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4), var(--shadow-glow-blue);
+}
+
+/* Glass Cabin Visual Card */
+.hero-visual {
+    position: relative;
+    height: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-glass);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.hero-visual:hover .hero-image {
+    transform: scale(1.03);
+}
+
+.hero-visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(5, 8, 22, 0.85) 0%, rgba(5, 8, 22, 0.2) 60%, rgba(5, 8, 22, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+}
+
+.hero-cabin-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 16px 24px;
+}
+
+.info-stat {
+    text-align: center;
+}
+
+.info-stat-val {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-primary-glow);
+}
+
+.info-stat-lbl {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}

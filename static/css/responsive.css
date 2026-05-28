@@ -1,0 +1,116 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS - Xuayua Cloud Forest
+   ========================================================================== */
+
+.logo-mobile {
+    display: none;
+}
+
+.logo-desktop {
+    display: inline;
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+    }
+    .hero-badge {
+        align-self: center;
+    }
+    .hero-desc {
+        max-width: 100%;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .hero-visual {
+        height: 400px;
+    }
+    .ruta-panel {
+        grid-template-columns: 1fr;
+    }
+    .town-info-card {
+        height: auto;
+    }
+    .casa-panel {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .casa-img-tall, .casa-img-offset {
+        margin-top: 0;
+    }
+    .rules-panel {
+        grid-template-columns: 1fr;
+    }
+    .contact-panel {
+        grid-template-columns: 1fr;
+    }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 60px;
+        padding: 0 20px;
+    }
+    .nav-links {
+        display: none; /* Mobile menu toggled via JS */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(5, 8, 22, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 40px 0;
+        border-top: 1px solid var(--border-glass);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .section-title {
+        font-size: 2.1rem;
+    }
+    .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-logo span {
+        font-size: 16px;
+
+        white-space: nowrap;
+    }
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: inline;
+    }
+    .logo-desktop {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: inline;
+    }
+}
